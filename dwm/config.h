@@ -13,11 +13,6 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int viewontag			= 1;        /* Switch view on tag switch */
 static const char *fonts[]          = { "Ubuntu Nerd Font:size=14" };
 static const char dmenufont[]       = "Ubuntu Mono Nerd Font:size=14";
-// static const char col_gray1[]       = "#ff0000"; // 181818
-// static const char col_gray2[]       = "#00ff00"; // 303030
-// static const char col_gray3[]       = "#0000ff"; // 96b5b4
-// static const char col_gray4[]       = "#25272f"; // d7d7d7
-// static const char col_cyan[]        = "#ffffff"; // 3c4657
 
 static const char col_gray1[]       = "#d9d9d9"; // 181818
 static const char col_gray2[]       = "#404552"; // 303030
@@ -41,13 +36,15 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      								  instance    title       tags mask     isfloating   monitor */
-	{ "Code",  							  		  NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "TablePlus",  							  NULL,       NULL,       1 << 4,       0,           -1 },
-	{ "Google-chrome",  						  NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "Cisco AnyConnect Secure Mobility Client",  NULL,       NULL,       1 << 6,       0,           -1 },
-	{ "Gimp",     								  NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  								  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class     								  instance    title       tags mask     iscentered   isfloating   monitor */
+	{ "Gimp",     								  NULL,       NULL,       0,            0,           1,           -1 },
+	{ "Firefox",  								  NULL,       NULL,       1 << 8,       0,           0,           -1 },
+
+	{ "PanGPUI", 								  NULL, 	  NULL, 	  0, 			0, 			 1, 	      -1 },
+	{ "Code",  							  		  NULL,       NULL,       1 << 2,       0,           0,			  -1 },
+	{ "TablePlus",  							  NULL,       NULL,       1 << 4,       0,           0,			  -1 },
+	{ "Google-chrome",  						  NULL,       NULL,       1 << 1,       0,           0,			  -1 },
+	{ "Cisco AnyConnect Secure Mobility Client",  NULL,       NULL,       1 << 6,       0,           0,			  -1 },
 };
 
 /* layout(s) */
